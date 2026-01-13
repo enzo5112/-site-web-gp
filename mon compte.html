@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creer un Compte</title>
+    <link rel="stylesheet" href="style mon compte.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Creer un Compte</h1>
+            <p>Rejoignez-nous dès maintenant</p>
+        </div>
+
+        <div class="signup-card">
+            <form class="signup-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Jean" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Dupont" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="jean.dupont@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-naissance">Date de naissance</label>
+                    <input type="date" id="date-naissance" name="date-naissance" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="adresse">Adresse</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="15 rue de la Paix, 75002 Paris" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">J'accepte les conditions d'utilisation et la politique de confidentialité</label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Je souhaite recevoir les newsletters et offres exclusives</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Créer mon compte</button>
+
+                <div class="login-link">
+                    Vous avez déjà un compte ? <a href="#">Se connecter</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

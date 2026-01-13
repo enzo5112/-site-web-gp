@@ -1,0 +1,165 @@
+/* ------------------------------------
+   STYLE GLOBAL
+------------------------------------ */
+body {
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* ------------------------------------
+   EN-TÊTE / HEADER
+------------------------------------ */
+.entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 55px;
+  padding: 0 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo, .entete-img {
+  width: 42px;
+  border-radius: 6px;
+}
+
+.titre {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+/* ------------------------------------
+   MENU / PLAN DU SITE
+------------------------------------ */
+.plan {
+  background-color: white;
+  border-radius: 6px;
+  padding: 20px;
+  margin: 25px;
+  width: 230px;
+  border: 1px solid #e5e5e5;
+}
+
+.plan-titre {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.liste {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.liste li {
+  margin-bottom: 8px;
+}
+
+.liste li a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.liste li a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------
+   TITRES ET TEXTES CENTRÉS
+------------------------------------ */
+.Bienvenue {
+  text-align: center;
+  color: #222;
+  font-size: 28px;
+  margin-top: 20px;
+}
+
+.langage, .contenu {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* ------------------------------------
+   TABLEAU DE PRODUITS / IMAGES
+------------------------------------ */
+.tableau {
+  margin: 30px auto;
+  border-collapse: collapse;
+}
+
+.tableau td {
+  padding: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e1e1e1;
+}
+
+.tableau img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tableau img:hover {
+  transform: scale(1.05);
+}
+
+/* ------------------------------------
+   CONCLUSION / INFO BAS DE PAGE
+------------------------------------ */
+.conclusion {
+  background-color: #fffbe0;
+  text-align: center;
+  padding: 12px;
+  font-weight: 600;
+  color: #444;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* ------------------------------------
+   ZONE QUESTIONNAIRE
+------------------------------------ */
+.questionnaire {
+  margin-left: 25px;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ------------------------------------
+   PIED DE PAGE AVEC IMAGE
+------------------------------------ */
+.pied.image {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.pied-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pied-texte {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  color: #222;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 6px 12px;
+  border-radius: 4px;
+}

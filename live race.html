@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Race – GP de Spa-Francorchamps</title>
+  <link rel="stylesheet" href="live race.css">
+</head>
+
+<body>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="live-indicator">
+      <span class="pulse-dot"></span>
+      <span class="live-text">EN DIRECT</span>
+    </div>
+    <h1>🏁 Live GP de Spa-Francorchamps</h1>
+    <p>Suivi en temps réel – Simulation</p>
+  </section>
+
+  <!-- CONFIG -->
+  <section class="api-config">
+    <button class="btn-primary" onclick="connectAPI()">Démarrer le Live</button>
+  </section>
+
+  <!-- INFOS COURSE -->
+  <section class="current-race">
+    <h2>Course en cours</h2>
+    <div id="race-info">En attente…</div>
+  </section>
+
+  <!-- CLASSEMENT -->
+  <section class="live-standings">
+    <h2>Classement</h2>
+    <div id="standings-container">En attente…</div>
+  </section>
+
+  <!-- METEO + TELEMETRIE -->
+  <div class="info-grid">
+
+    <section class="weather-info">
+      <h3>🌤️ Météo</h3>
+      <div id="weather-data">—</div>
+    </section>
+
+    <section class="telemetry-info">
+      <h3>📊 Télémétrie</h3>
+      <div id="telemetry-data">—</div>
+    </section>
+
+  </div>
+
+  <!-- GRAPHIQUE -->
+  <section class="speed-chart">
+    <h2>Vitesse des leaders</h2>
+    <canvas id="speedChart"></canvas>
+  </section>
+
+  <!-- CIRCUIT -->
+  <section class="circuit-map">
+    <h2>🏎️ Circuit</h2>
+    <canvas id="circuitCanvas"></canvas>
+    <p>Tour : <span id="current-lap">1/44</span></p>
+    <p>Leader : <span id="race-leader">—</span></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 – Live F1 Spa</p>
+</footer>
+
+<script src="live race.js"></script>
+</body>
+</html>

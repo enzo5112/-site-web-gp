@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billetterie F1 - Formule 1</title>
+    <link rel="stylesheet" href="style billetrie.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <button class="btn-home" onclick="window.location.href='site perso.html'">
+                    ← Retour à l'accueil
+                </button>
+                <div class="header-title">
+                    <h1>🏁 F1 BILLETTERIE</h1>
+                    <p>Réservez vos places pour la saison 2025</p>
+                </div>
+                <div class="cart-summary">
+                    <p>Panier</p>
+                    <span id="cartCount">0</span> <span style="font-size: 1rem;">billets</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Races Section -->
+            <div class="races-section">
+                <!-- Monaco GP -->
+                <div class="race-card">
+                    <div class="race-header">
+                        <div class="race-info">
+                            <div class="race-flag">🇲🇨</div>
+                            <div class="race-details">
+                                <h3>Grand Prix de Monaco</h3>
+                                <p>Circuit de Monaco</p>
+                                <div class="race-meta">
+                                    <span>📅 25 Mai 2025</span>
+                                    <span>📍 Monaco</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="race-body">
+                        <div class="categories">
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Tribune K</h4>
+                                    <p>45 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">650€</div>
+                                    <button class="btn btn-add" onclick="addToCart('Monaco', 'Tribune K', 650, '🇲🇨')">Ajouter</button>
+                                </div>
+                            </div>
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Tribune T</h4>
+                                    <p>30 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">850€</div>
+                                    <button class="btn btn-add" onclick="addToCart('Monaco', 'Tribune T', 850, '🇲🇨')">Ajouter</button>
+                                </div>
+                            </div>
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Paddock Club</h4>
+                                    <p>12 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">2500€</div>
+                                    <button class="btn btn-add" onclick="addToCart('Monaco', 'Paddock Club', 2500, '🇲🇨')">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- France GP -->
+                <div class="race-card">
+                    <div class="race-header">
+                        <div class="race-info">
+                            <div class="race-flag">🇫🇷</div>
+                            <div class="race-details">
+                                <h3>Grand Prix de France</h3>
+                                <p>Circuit Paul Ricard</p>
+                                <div class="race-meta">
+                                    <span>📅 29 Juin 2025</span>
+                                    <span>📍 France</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="race-body">
+                        <div class="categories">
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Virage Signes</h4>
+                                    <p>150 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">320€</div>
+                                    <button class="btn btn-add" onclick="addToCart('France', 'Virage Signes', 320, '🇫🇷')">Ajouter</button>
+                                </div>
+                            </div>
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Tribune Mistral</h4>
+                                    <p>85 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">450€</div>
+                                    <button class="btn btn-add" onclick="addToCart('France', 'Tribune Mistral', 450, '🇫🇷')">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Belgium GP -->
+                <div class="race-card">
+                    <div class="race-header">
+                        <div class="race-info">
+                            <div class="race-flag">🇧🇪</div>
+                            <div class="race-details">
+                                <h3>Grand Prix de Belgique</h3>
+                                <p>Circuit de Spa-Francorchamps</p>
+                                <div class="race-meta">
+                                    <span> 27 Juillet 2025</span>
+                                    <span> Belgique</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="race-body">
+                        <div class="categories">
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Eau Rouge</h4>
+                                    <p>200 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">380</div>
+                                    <button class="btn btn-add" onclick="addToCart('Belgique', 'Eau Rouge', 380, '🇧🇪')">Ajouter</button>
+                                </div>
+                            </div>
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Paddock Club</h4>
+                                    <p>15 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">1950</div>
+                                    <button class="btn btn-add" onclick="addToCart('Belgique', 'Paddock Club', 1950, '🇧🇪')">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Italy GP -->
+                <div class="race-card">
+                    <div class="race-header">
+                        <div class="race-info">
+                            <div class="race-flag">🇮🇹</div>
+                            <div class="race-details">
+                                <h3>Grand Prix d'Italie</h3>
+                                <p>Autodromo di Monza</p>
+                                <div class="race-meta">
+                                    <span>📅 7 Septembre 2025</span>
+                                    <span>📍 Italie</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="race-body">
+                        <div class="categories">
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Parabolica</h4>
+                                    <p>120 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">420€</div>
+                                    <button class="btn btn-add" onclick="addToCart('Italie', 'Parabolica', 420, '🇮🇹')">Ajouter</button>
+                                </div>
+                            </div>
+                            <div class="category">
+                                <div class="category-info">
+                                    <h4>Variante Ascari</h4>
+                                    <p>140 places disponibles</p>
+                                </div>
+                                <div class="category-action">
+                                    <div class="category-price">350€</div>
+                                    <button class="btn btn-add" onclick="addToCart('Italie', 'Variante Ascari', 350, '🇮🇹')">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+                    <div id="cartEmpty" class="cart-empty">
+                        <div class="cart-empty-icon">🎫</div>
+                        <p><strong>Aucun billet sélectionné</strong></p>
+                        <p style="font-size: 0.9rem; margin-top: 10px;">Choisissez vos courses préférées</p>
+                    </div>
+
+                    <div id="cartContent" class="hidden">
+                        <div id="cartItems" class="cart-items"></div>
+
+                        <div class="cart-total">
+                            <div class="total-row">
+                                <span>Nombre de billets:</span>
+                                <strong id="totalTickets">0</strong>
+                            </div>
+                            <div class="total-row main">
+                                <span>TOTAL:</span>
+                                <span class="total-amount" id="totalPrice">€</span>
+                            </div>
+                        </div>
+
+                        <button class="btn-checkout" onclick="checkout()">
+                            ✓ VALIDER LA COMMANDE
+                        </button>
+                    </div>

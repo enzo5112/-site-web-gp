@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - Merchandising F1</title>
+    <link rel="stylesheet" href="stylesss.css">
+</head>
+<body>
+    <!-- En-tête de la page -->
+    <div class="page-header">
+        <div class="container">
+            <div class="header-top">
+                <a href="site perso.html" class="btn-back">
+                    <span class="arrow">←</span> Retour à l'accueil
+                </a>
+                <button class="btn-cart" id="toggleCart">
+                    🛒 Panier (<span id="cartCount">0</span>)
+                </button>
+            </div>
+            <h1 class="page-title">Boutique Officielle</h1>
+            <p class="page-subtitle">Merchandising et produits dérivés F1</p>
+        </div>
+    </div>
+
+    <!-- Panier latéral -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Mon Panier</h2>
+            <button class="btn-close-cart" id="closeCart">✕</button>
+        </div>
+        <div class="cart-content" id="cartContent">
+            <p class="cart-empty">Votre panier est vide</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-price" id="totalPrice">0,00€</span>
+            </div>
+            <button class="btn-checkout">Passer commande</button>
+        </div>
+    </div>
+
+    <!-- Overlay pour fermer le panier -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Contenu principal -->
+    <div class="container">
+        <!-- Section filtres -->
+        <div class="filters-section">
+            <h3 class="filters-title">Filtrer par catégorie</h3>
+            <div class="filters">
+                <button class="filter-btn active">Tous</button>
+                <button class="filter-btn">Vêtements</button>
+                <button class="filter-btn">Casquettes</button>
+                <button class="filter-btn">Accessoires</button>
+                <button class="filter-btn">Miniatures</button>
+                <button class="filter-btn">Red Bull</button>
+                <button class="filter-btn">Ferrari</button>
+                <button class="filter-btn">Mercedes</button>
+            </div>
+        </div>
+
+        <!-- Grille de produits -->
+        <div class="products-grid">
+            <!-- Produit 1 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Red Bull</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🧢</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Casquettes</div>
+                    <h3 class="product-name">Casquette Red Bull Racing 2024</h3>
+                    <p class="product-desc">Casquette officielle de l'équipe championne du monde</p>
+                    <div class="product-footer">
+                        <span class="product-price">39,99€</span>
+                        <button class="btn-add-cart" data-name="Casquette Red Bull Racing 2024" data-price="39.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 2 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Ferrari</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">👕</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Vêtements</div>
+                    <h3 class="product-name">T-shirt Scuderia Ferrari</h3>
+                    <p class="product-desc">T-shirt officiel en coton premium avec logo brodé</p>
+                    <div class="product-footer">
+                        <span class="product-price">49,99€</span>
+                        <button class="btn-add-cart" data-name="T-shirt Scuderia Ferrari" data-price="49.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 3 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Mercedes</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🧥</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Vêtements</div>
+                    <h3 class="product-name">Veste Mercedes-AMG</h3>
+                    <p class="product-desc">Veste softshell imperméable équipe Mercedes</p>
+                    <div class="product-footer">
+                        <span class="product-price">139,99€</span>
+                        <button class="btn-add-cart" data-name="Veste Mercedes-AMG" data-price="139.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 4 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Red Bull</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🏆</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Miniatures</div>
+                    <h3 class="product-name">Miniature RB20 Verstappen</h3>
+                    <p class="product-desc">Réplique 1:43 de la monoplace de Max Verstappen</p>
+                    <div class="product-footer">
+                        <span class="product-price">89,99€</span>
+                        <button class="btn-add-cart" data-name="Miniature RB20 Verstappen" data-price="89.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 5 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">McLaren</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🎒</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Sac à Dos McLaren Racing</h3>
+                    <p class="product-desc">Sac à dos 20L avec compartiment ordinateur</p>
+                    <div class="product-footer">
+                        <span class="product-price">69,99€</span>
+                        <button class="btn-add-cart" data-name="Sac à Dos McLaren Racing" data-price="69.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 6 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Ferrari</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🧢</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Casquettes</div>
+                    <h3 class="product-name">Casquette Ferrari Leclerc #16</h3>
+                    <p class="product-desc">Casquette édition pilote Charles Leclerc</p>
+                    <div class="product-footer">
+                        <span class="product-price">44,99€</span>
+                        <button class="btn-add-cart" data-name="Casquette Ferrari Leclerc #16" data-price="44.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 7 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Red Bull</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">👕</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Vêtements</div>
+                    <h3 class="product-name">Polo Red Bull Racing</h3>
+                    <p class="product-desc">Polo officiel équipe avec sponsors</p>
+                    <div class="product-footer">
+                        <span class="product-price">79,99€</span>
+                        <button class="btn-add-cart" data-name="Polo Red Bull Racing" data-price="79.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 8 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Mercedes</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">🏆</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Miniatures</div>
+                    <h3 class="product-name">Miniature W15 Hamilton</h3>
+                    <p class="product-desc">Monoplace Mercedes-AMG F1 échelle 1:43</p>
+                    <div class="product-footer">
+                        <span class="product-price">89,99€</span>
+                        <button class="btn-add-cart" data-name="Miniature W15 Hamilton" data-price="89.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Produit 9 -->
+            <article class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">Ferrari</span>
+                    <span class="stock-badge">En stock</span>
+                    <span class="product-icon">⌚</span>
+                </div>
+                <div class="product-content">
+                    <div class="product-category">Accessoires</div>
+                    <h3 class="product-name">Montre Ferrari Chronographe</h3>
+                    <p class="product-desc">Montre officielle Scuderia avec bracelet silicone</p>
+                    <div class="product-footer">
+                        <span class="product-price">249,99€</span>
+                        <button class="btn-add-cart" data-name="Montre Ferrari Chronographe" data-price="249.99">Ajouter au panier</button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
